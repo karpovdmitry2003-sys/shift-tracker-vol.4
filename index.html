@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Трекер смен v3</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div class="wrap">
+<h1>Трекер смен v3</h1>
+<div id="unfinishedAlert" class="alert" hidden>⚠️ Есть незавершённая смена</div>
+
+<div class="card">
+<h2>Текущая смена</h2>
+<div id="status">Смена не начата</div>
+<div class="grid">
+<div>Смена <b id="shift">00:00</b></div>
+<div>Паузы <b id="breaks">00:00</b></div>
+<div>Работа <b id="work">00:00</b></div>
+</div>
+<textarea id="shiftNote" placeholder="Заметка к смене"></textarea>
+<div class="btns">
+<button id="startShift">Начать смену</button>
+<button id="startBreak">Начать паузу</button>
+<button id="endBreak">Закончить паузу</button>
+<button id="endShift">Закончить смену</button>
+</div>
+<div class="quick">
+<button class="qb" data-m="15">15 мин</button>
+<button class="qb" data-m="30">30 мин</button>
+<button class="qb" data-m="45">45 мин</button>
+<button class="qb" data-m="60">60 мин</button>
+</div>
+</div>
+
+<div class="card">
+<h2>История</h2>
+<input id="month" type="month">
+<div id="summary"></div>
+<button id="exportBtn">Экспорт</button>
+<label class="buttonLike">Импорт<input hidden type="file" id="importFile"></label>
+<div id="history"></div>
+</div>
+
+<div class="card">
+<h2>Статистика по неделям</h2>
+<div id="weeklyStats"></div>
+</div>
+</div>
+<script src="app.js"></script>
+</body></html>
